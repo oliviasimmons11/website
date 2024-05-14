@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+
+
+   <h3>User List:</h3>
+   <br>
+   <form method="POST">
+       {{ form.hidden_tag() }}
+
+
+       {{ form.name.label (
+           class="form-label")}}
+
+
+       {{ form.name(
+           class="form-control") }}
+
+
+       {{ form.email.label (
+           class="form-label")}}
+  
+       {{ form.email(
+           class="form-control") }} 
+       <br>
+       {{ form.submit(
+           class="btn btn-outline-success") }}
+   </form>
+
+
+   {% for our_user in our_users %}
+   {{our_user.id}}-{{our_user.name}}-{{our_user.email}}
+
+
+   {% endfor %}
+{% endblock %}
