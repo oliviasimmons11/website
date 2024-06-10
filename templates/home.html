@@ -2,9 +2,22 @@
 {% extends 'layout.html' %}
 {% block content %}
 
-<h1 style="color:green;">Hello World</h1>
-<img src="{{url_for('static', filename='/images/digi.png')}}">
+<div class="navbar">
+    <button class="logo">HHW</button>
+        <div class="navbar_links">
+            <h3>ABOUT US</h3>
+            <h3>RESULTS + DATA</h3>
+            <h3>GALLERY</h3>
+        </div>
+    <button class="join_us">JOIN US</button>
+</div>
+
+<script src="{{url_for('static', filename='somejavascriptfile.js')}}"></script>
 
 {% endblock %}
+
+#
+<!-- <img src="{{url_for('static', filename='/images/digi.png')}}"> 
+    -->
 
 
